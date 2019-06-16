@@ -1,9 +1,10 @@
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open('mws-restaurant-page-1').then(function(cache){
+    caches.open('Restaurants-Reviews').then(function(cache){
       return cache.addAll([
         '/',
         '/index.html',
+        '/restaurant.html',
         '/data/restaurants.json',
         '/js/dbhelper.js',
         '/js/main.js',
@@ -19,7 +20,6 @@ self.addEventListener('install', function(event) {
         '/img/8.jpg',
         '/img/9.jpg',
         '/img/10.jpg',
-        '/restaurant.html',
         'https://api.tiles.mapbox.com/v4/mapbox.streets/16/19297/24640.jpg70?access_token=pk.eyJ1IjoibGVvb3JlaW5hIiwiYSI6ImNqdTJ3aTU4MjBneTU0NHB2aWVhcWI3NGMifQ.rWYO5otgGXDEOCwD_wRwPw'
       ]);
     })
